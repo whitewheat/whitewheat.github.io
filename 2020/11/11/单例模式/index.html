@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://gitee.com/whiterain/WhiteRain">
   <title>WhiteRain&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: tagsdate: 2020-11-11 09:54:48type: “tags”layout: “tags”​—">
-<meta property="og:type" content="website">
+  <meta name="description" content="单例模式 构造方法私有，保证只有一个实例（对象） 在类中创建一个static的实例 创建一个获取实例的方法     1234567891011121314151617181920212223242526272829303132&#x2F;&#x2F;懒汉式 ：当调用实例时才去初始化实例class Lazy&amp;#123;	&#x2F;&#x2F;1.私有的构造器	private Lazy() &amp;#123;	&amp;#125;		&#x2F;&#x2F;2.声明当前对">
+<meta property="og:type" content="article">
 <meta property="og:title" content="WhiteRain&#39;s Blog">
-<meta property="og:url" content="https://gitee.com/whiterain/WhiteRain/tags/index.html">
+<meta property="og:url" content="https://gitee.com/whiterain/WhiteRain/2020/11/11/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="WhiteRain&#39;s Blog">
-<meta property="og:description" content="title: tagsdate: 2020-11-11 09:54:48type: “tags”layout: “tags”​—">
+<meta property="og:description" content="单例模式 构造方法私有，保证只有一个实例（对象） 在类中创建一个static的实例 创建一个获取实例的方法     1234567891011121314151617181920212223242526272829303132&#x2F;&#x2F;懒汉式 ：当调用实例时才去初始化实例class Lazy&amp;#123;	&#x2F;&#x2F;1.私有的构造器	private Lazy() &amp;#123;	&amp;#125;		&#x2F;&#x2F;2.声明当前对">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-11-11T02:10:09.362Z">
-<meta property="article:modified_time" content="2020-11-11T02:10:09.362Z">
+<meta property="article:published_time" content="2020-11-11T06:35:06.415Z">
+<meta property="article:modified_time" content="2020-07-28T08:44:28.403Z">
 <meta property="article:author" content="WhiteRain">
 <meta name="twitter:card" content="summary">
   
@@ -152,13 +152,17 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-单例模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: tags<br>date: 2020-11-11 09:54:48<br>type: “tags”<br>layout: “tags”<br>​—</p>
+        <p>单例模式</p>
+<p>构造方法私有，保证只有一个实例（对象）</p>
+<p>在类中创建一个static的实例</p>
+<p>创建一个获取实例的方法    </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//懒汉式 ：当调用实例时才去初始化实例</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lazy</span></span>&#123;</span><br><span class="line">	<span class="comment">//1.私有的构造器</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Lazy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//2.声明当前对象没有初始化s</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Lazy instance=<span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 3.声明一个public static 的返回实例的方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Lazy <span class="title">GetInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(instance == <span class="keyword">null</span>) &#123;  <span class="comment">//第一次调用实例时创建实例</span></span><br><span class="line">			instance=<span class="keyword">new</span> Lazy();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> instance;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//饿汉式 ：提前初始化好实例</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Starve</span></span>&#123;</span><br><span class="line">	<span class="comment">//1.私有化的构造器</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Starve</span><span class="params">()</span> </span>&#123;	</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">//2.初始化了的实例</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Starve instance=<span class="keyword">new</span> Starve();</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//3.返回实例的方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Starve <span class="title">GetInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> instance;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -238,7 +242,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://gitee.com/whiterain/WhiteRain/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://gitee.com/whiterain/WhiteRain/2020/11/11/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -250,6 +254,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/11/11/%E5%85%B3%E4%BA%8E%20%20%E7%96%AB%E6%83%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/11/%E4%BB%A3%E7%A0%81%E5%9D%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -313,7 +336,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

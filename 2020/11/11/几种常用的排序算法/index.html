@@ -8,17 +8,21 @@
   <link rel="dns-prefetch" href="https://gitee.com/whiterain/WhiteRain">
   <title>WhiteRain&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: tagsdate: 2020-11-11 09:54:48type: “tags”layout: “tags”​—">
-<meta property="og:type" content="website">
+  <meta name="description" content="排序算法  一、冒泡排序（Bubble Sort）​    冒泡排序 是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。  ​           算法描述 步骤1: 比较相邻的元素。如果第一个比第二个大">
+<meta property="og:type" content="article">
 <meta property="og:title" content="WhiteRain&#39;s Blog">
-<meta property="og:url" content="https://gitee.com/whiterain/WhiteRain/tags/index.html">
+<meta property="og:url" content="https://gitee.com/whiterain/WhiteRain/2020/11/11/%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="WhiteRain&#39;s Blog">
-<meta property="og:description" content="title: tagsdate: 2020-11-11 09:54:48type: “tags”layout: “tags”​—">
+<meta property="og:description" content="排序算法  一、冒泡排序（Bubble Sort）​    冒泡排序 是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。  ​           算法描述 步骤1: 比较相邻的元素。如果第一个比第二个大">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-11-11T02:10:09.362Z">
-<meta property="article:modified_time" content="2020-11-11T02:10:09.362Z">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvODQ5NTg5LzIwMTcxMC84NDk1ODktMjAxNzEwMTUyMzMwNDMxNjgtMTg2NzgxNzg2OS5wbmc?x-oss-process=image/format,png">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvODQ5NTg5LzIwMTcxMC84NDk1ODktMjAxNzEwMTUyMjMyMzg0NDktMjE0NjE2OTE5Ny5naWY">
+<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvODQ5NTg5LzIwMTcxMC84NDk1ODktMjAxNzEwMTUyMjU2NDUyNzctMTE1MTEwMDAwMC5naWY">
+<meta property="article:published_time" content="2020-11-11T06:35:06.419Z">
+<meta property="article:modified_time" content="2020-07-04T14:50:05.347Z">
 <meta property="article:author" content="WhiteRain">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvODQ5NTg5LzIwMTcxMC84NDk1ODktMjAxNzEwMTUyMzMwNDMxNjgtMTg2NzgxNzg2OS5wbmc?x-oss-process=image/format,png">
   
     <link rel="alternative" href="/atom.xml" title="WhiteRain&#39;s Blog" type="application/atom+xml">
   
@@ -152,13 +156,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-几种常用的排序算法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: tags<br>date: 2020-11-11 09:54:48<br>type: “tags”<br>layout: “tags”<br>​—</p>
+        <p><strong>排序算法</strong></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvODQ5NTg5LzIwMTcxMC84NDk1ODktMjAxNzEwMTUyMzMwNDMxNjgtMTg2NzgxNzg2OS5wbmc?x-oss-process=image/format,png" alt="img"></p>
+<h3 id="一、冒泡排序（Bubble-Sort）"><a href="#一、冒泡排序（Bubble-Sort）" class="headerlink" title="一、冒泡排序（Bubble Sort）"></a>一、冒泡排序（Bubble Sort）</h3><p>​    <strong>冒泡排序</strong> 是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。</p>
+<ol>
+<li>​        <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvODQ5NTg5LzIwMTcxMC84NDk1ODktMjAxNzEwMTUyMjMyMzg0NDktMjE0NjE2OTE5Ny5naWY" alt="img"></li>
+</ol>
+<ol start="2">
+<li>算法描述<br> 步骤1: 比较相邻的元素。如果第一个比第二个大，就交换它们两个；<br>步骤2: 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对，这样在最后的元素应该会是最大的数；<br>步骤3: 针对所有的元素重复以上的步骤，除了最后一个；<br>步骤4: 重复步骤1~3，直到排序完成。</li>
+</ol>
+<ol start="3">
+<li><pre><code class="java">    public static int[] bubbleSort(int array[])&#123;
+        if (array.length == 0)
+            return array;
+        for(int i = 0 ; i &lt; array.length ; i++)
+        &#123;
+            for(int j = 0 ; j &lt; array.length-1-i ; j++) &#123;
+                if(array[j] &lt; array[j+1]) &#123; //此处的大于为升序 小于为降序
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] =temp;
+                &#125;
+            &#125;        
+        &#125;
+        return array;
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   算法分析</span><br><span class="line"></span><br><span class="line">   - 最佳情况：T(n) &#x3D; O(n)</span><br><span class="line">   - 最差情况：T(n) &#x3D; O(n2)</span><br><span class="line">   - 平均情况：T(n) &#x3D; O(n2)</span><br><span class="line"></span><br><span class="line">### 二、选择排序（Selection Sort）</span><br><span class="line"></span><br><span class="line">##### 			 **选择排序** 是表现最稳定的排序算法之一 ，**因为无论什么数据进去都是O(n2)的时间复杂度** ，所以用到它的时候，数据规模越小越好。唯一的好处可能就是不占用额外的内存空间了吧。理论上讲，选择排序可能也是平时排序一般人想到的最多的排序方法了吧。</span><br><span class="line"></span><br><span class="line">![image](https:&#x2F;&#x2F;imgconvert.csdnimg.cn&#x2F;aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvODQ5NTg5LzIwMTcxMC84NDk1ODktMjAxNzEwMTUyMjQ3MTk1OTAtMTQzMzIxOTgyNC5naWY)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">&#x2F;&#x2F;选择排序</span><br><span class="line">	public static int[] selectionSort(int array[]) &#123;</span><br><span class="line">		if(array.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">			return array;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		for(int i&#x3D;0 ; i &lt; array.length ; i++) &#123;</span><br><span class="line">			int minIndex&#x3D;i;</span><br><span class="line">			for(int j&#x3D;i ; j&lt;array.length ; j++) &#123;</span><br><span class="line">				if(array[j] &lt; array[j+1]) &#123;</span><br><span class="line">					minIndex &#x3D; j;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			int temp &#x3D; array[i];</span><br><span class="line">			array[i] &#x3D; array[minIndex];</span><br><span class="line">			array[minIndex] &#x3D; temp;		</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		return array;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ol>
+<p>算法分析</p>
+<ul>
+<li>最佳情况：T(n) = O(n2)</li>
+<li>最差情况：T(n) = O(n2)</li>
+<li>平均情况：T(n) = O(n2)</li>
+</ul>
+<h3 id="插入排序（Insertion-Sort）"><a href="#插入排序（Insertion-Sort）" class="headerlink" title="插入排序（Insertion Sort）"></a>插入排序（Insertion Sort）</h3><p>​    插入排序（Insertion-Sort） 的算法描述是一种简单直观的排序算法。它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvODQ5NTg5LzIwMTcxMC84NDk1ODktMjAxNzEwMTUyMjU2NDUyNzctMTE1MTEwMDAwMC5naWY" alt="img"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] insertionSort(<span class="keyword">int</span>[] array) &#123;</span><br><span class="line">	<span class="keyword">if</span>(array.length == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> array;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;array.length-<span class="number">1</span> ; i++) &#123;<span class="comment">//i是preIndex i+1是Current</span></span><br><span class="line">	</span><br><span class="line">		<span class="keyword">int</span> preIndex = i;			<span class="comment">//前面完成排序部分的最后一个元素（最大的）</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> current = array[i+<span class="number">1</span>];	<span class="comment">//未排序部分 要进行排序的当前元素</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span>(preIndex &gt;= <span class="number">0</span> &amp;&amp; current &lt; array[preIndex]) &#123; <span class="comment">//后面的小于号升序 大于号降序</span></span><br><span class="line">			 	<span class="comment">//每次和current比较，若小于current则当前的值往后排 给current腾位置</span></span><br><span class="line">			array[preIndex+<span class="number">1</span>] = array[preIndex];		</span><br><span class="line">			preIndex--;</span><br><span class="line">		&#125;			</span><br><span class="line">		</span><br><span class="line">		array[preIndex+<span class="number">1</span>]=current; <span class="comment">// 把current的值放到完成排序部分中它该在的位置</span></span><br><span class="line">	&#125; 		</span><br><span class="line">	<span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -238,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://gitee.com/whiterain/WhiteRain/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://gitee.com/whiterain/WhiteRain/2020/11/11/%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -250,6 +291,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/11/11/%E8%BF%9B%E7%A8%8B%20%E7%BA%BF%E7%A8%8B%20%20%E5%90%8C%E6%AD%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/11/%E5%85%B3%E4%BA%8E%20%20%E7%96%AB%E6%83%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -271,7 +331,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    莫得目录…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%EF%BC%88Bubble-Sort%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">一、冒泡排序（Bubble Sort）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%EF%BC%88Insertion-Sort%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">插入排序（Insertion Sort）</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -313,7 +373,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
